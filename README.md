@@ -8,6 +8,8 @@ Ce dépôt git a pour objectif de mettre à disposition les scripts de correctio
 
 Le script de correction de la BDNI est `fix_bdni.py`.
 
+Le script n'est pas exécutable sans fichier BDNI à corriger. Les données contenues dans la BDNI sont des données considérées comme sensibles. C'est pourquoi il n'est pas possible de donner accès à ce fichier de données pour tester l'exécution du script.
+
 ### Exécution du script
 
 Ce script peut être exécuté à partir d'un terminal grâce à la commande `python3`.
@@ -69,3 +71,13 @@ Afin de s'exécuter, le script a besoin que le dossier `networks` soit dans le m
 ### Sorties
 
 Ce script produit trois fichiers .csv reprenant la dynamique épidémiologique pour chaque état (S,I,R) par pas de temps.
+
+### Dépendances
+
+Pour s'exécuter, le script a besoin que python soit installé sur votre environnement de travail. Il a également besoin des librairies suivantes :
+
+* [numpy](https://numpy.org/doc/stable/user/index.html)
+* [pandas](https://pandas.pydata.org/)
+* [rich](https://rich.readthedocs.io/en/stable/introduction.html)
+* [tqdm](https://github.com/tqdm/tqdm)
+
