@@ -52,7 +52,7 @@ nb_Reps=10
 # Importatation des données réseau
 df_Links = pd.read_csv('networks/5km/reseau_geocode_5km.csv')
 # Chemin pour les sorties
-path = '' # Cette variable permet de choisir si l'on veut exporter les dynamiques dans un dossier précis
+path = 'sorties-modele/' # Cette variable permet de choisir si l'on veut exporter les dynamiques dans un dossier précis
 
 # --------------------------- CLASSE NODE ----------------------------- #
 #                                                                       # 
