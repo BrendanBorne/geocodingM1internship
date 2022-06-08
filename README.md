@@ -2,6 +2,8 @@
 
 Ce dépôt git a pour objectif de mettre à disposition les scripts de correction de la Base Nationale d'Identification animale et de modélisation de la propagation d'un agent pathogène sur réseau de contact qui ont été produits au cours de mon stage de M1 MODE au sein de l'équipe DYNAMO de l'INRAE.
 
+Vous pouvez télécharger l'intégralité du contenu de ce dépôt pour le tester sur votre machine via le bouton `Code` puis `Download ZIP` ou en clonant le dépôt chez vous.
+
 ---
 
 ## Sommaire
@@ -38,7 +40,9 @@ Ce script peut être exécuté à partir d'un terminal grâce à la commande `py
 L'exécution de ce script doit recevoir deux arguments positionnels (à fournir dans le bon ordre) :
 
 * Le premier argument est le nom du fichier BDNI à corriger
-* Le deuxième argument est le nom du fichier corriger à écrire. Ces deux arguments sont obligatoires.
+* Le deuxième argument est le nom du fichier corrigé à écrire.
+
+Ces deux arguments sont obligatoires.
 
 La commande minimale pour lancer le script est donc :
 
@@ -48,11 +52,11 @@ La commande minimale pour lancer le script est donc :
 
 Additionnellement, trois arguments facultatifs peuvent être passés au script :
 
-* --fraction : fraction de la BDNI sur laquelle travailler. Utile pour le débuggage.
-* --insee : nom du tableau des mouvements de commune INSEE à utiliser. "insee.csv" par défaut
-* --laposte : nom du tableau de la poste à utiliser. "laposte_hexasmal.csv" par défaut
+* --fraction : fraction de la BDNI sur laquelle travailler. Utile pour le débuggage. 1 par défaut.
+* --insee : nom du tableau des mouvements de commune INSEE à utiliser. "insee.csv" par défaut.
+* --laposte : nom du tableau de la poste à utiliser. "laposte_hexasmal.csv" par défaut.
 
-Voilà un exemple de la commande permettant de lancer avec tous ses arguments :
+Voilà un exemple de la commande permettant de lancer le script avec tous ses arguments :
 
 `python3 fix_bdni.py BDN.EXPLOITATION BDN.CORRIGE --fraction 0.5 --insee 'insee.csv' --laposte 'laposte_hexasmal.csv'`
 
@@ -101,7 +105,7 @@ En l'état, il faut aller changer à la main les paramètres du scénario que l'
 
 Afin de s'exécuter, le script a besoin que le dossier `networks` soit dans le même répertoire.
 
-> L'exécution du modèle sur un nombre élevé de répétitions peut être (très) long. C'est pourquoi le nombre de répétitions par défaut sur la version présente dans ce dépôt est initialisée par défaut à 10 répétitions seulement.
+> L'exécution du modèle sur un nombre élevé de répétitions peut être (très) long. C'est pourquoi le nombre de répétitions par défaut sur la version présente dans ce dépôt est initialisée à 10 répétitions seulement.
 
 ### Sorties du modèle <a name="sortiemodel"></a>
 
@@ -127,11 +131,11 @@ Pour s'exécuter, le script a besoin que python soit installé sur votre environ
 
 ## Liens utiles <a name="liens"></a>
 
-Les fichiers fournis dans le git permettent de lancer le script sans problème. Ces fichiers étant mis à jour régulièrement, il est possible que ceux que vous trouverez ici ne soient plus complètement à jour.
+Les fichiers fournis dans le git permettent de lancer le script sans problème. Néanmoins ces fichiers sont mis à jour régulièrement. Il est donc possible que ceux que vous trouverez ici ne soient plus complètement à jour.
 
-Vous pouvez récupérer les derniers fichiers à jour ici :
+Vous pouvez récupérer les derniers fichiers ici :
 
 * [La Poste](https://datanova.laposte.fr/explore/dataset/laposte_hexasmal/information/?disjunctive.code_commune_insee&disjunctive.nom_de_la_commune&disjunctive.code_postal&disjunctive.ligne_5)
 * [Insee](https://www.insee.fr/fr/information/6051727)
 
-> L'Insee propose de télécharger un ensemble de fichiers d'un seul coup. Celui qui nous intéresse pour corriger la BDNI est mvtcommune_202X.csv
+> L'Insee propose de télécharger un ensemble de fichiers. Celui qui nous intéresse pour corriger la BDNI est mvtcommune_202X.csv
