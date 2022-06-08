@@ -1,6 +1,6 @@
 # Améliorer la géolocalisation des exploitations pour prédire la circulation d’agents pathogènes dans les troupeaux bovins en Loire-Atlantique
 
-Ce dépôt git a pour objectif de mettre à disposition les scripts de correction de la Base Nationale d'Identification animale et de modélisation de la propagation d'un agent pathogène sur réseau de contact qui ont été produits au cours du stage de M1 MODE au sein de l'INRAE par Brendan Borne.
+Ce dépôt git a pour objectif de mettre à disposition les scripts de correction de la Base Nationale d'Identification animale et de modélisation de la propagation d'un agent pathogène sur réseau de contact qui ont été produits au cours de mon stage de M1 MODE au sein de l'équipe DYNAMO de l'INRAE.
 
 > Dépôt en cours de construction !
 
@@ -31,7 +31,7 @@ Tous les fichiers nécessaires au script sont contenus dans le dossier `entrees-
 
 Le script n'est pas exécutable sans fichier BDNI à corriger. Les données contenues dans la BDNI sont des données considérées comme sensibles. C'est pourquoi il n'est pas possible de donner accès à ce fichier de données pour tester l'exécution du script.
 
-A la place, un fichier BDNI factice a été créé. Il ne contient que 200 entrées pour vous éviter un temps d'exécution trop long. Les colonnes sensibles ont été neutralisées. Ce fichier est le fichier `BDN.EXPLOITATION`.
+A la place, un fichier BDNI factice a été créé. Il ne contient que 200 entrées pour vous éviter un temps d'exécution trop long. Les colonnes sensibles ont été neutralisées. Ce fichier est `BDN.EXPLOITATION`.
 
 ### Exécution du script <a name="execscript"></a>
 
@@ -99,9 +99,11 @@ La commande pour lancer le modèle est donc :
 
 `python3 model.py`
 
-En l'état, il faut aller changer à la main les paramètres du scénario que l'on souhaite tester ainsi que le fichier de réseau à importer.
+En l'état, il faut aller changer à la main les paramètres du scénario que l'on souhaite tester ainsi que le fichier de réseau à importer. Ces paramètres sont tous à changer au même endroit au début du script.
 
 Afin de s'exécuter, le script a besoin que le dossier `networks` soit dans le même répertoire.
+
+> L'exécution du modèle sur un nombre élevé de répétitions peut être (très) long. C'est pourquoi le nombre de répétitions par défaut sur la version présente dans ce dépôt est initialisée par défaut à 10 répétitions seulement.
 
 ### Sorties du modèle <a name="sortiemodel"></a>
 
