@@ -12,12 +12,14 @@ Ce dépôt git a pour objectif de mettre à disposition les scripts de correctio
    * [Exécution](#execscript)
    * [Sorties](#sortiescript)
    * [Dépendances](#depscript)
-   * [Crédits](#crédits)
+   * [Crédits](#credits)
 
 2. [Modélisation de la propagation d'un agent pathogène](#model)
    * [Exécution](#execmodel)
    * [Sorties](#sortiemodel)
    * [Dépendances](#depmodel)
+
+3. [Liens utiles](#liens)
 
 ---
 
@@ -29,7 +31,7 @@ Tous les fichiers nécessaires au script sont contenus dans le dossier `entrees-
 
 Le script n'est pas exécutable sans fichier BDNI à corriger. Les données contenues dans la BDNI sont des données considérées comme sensibles. C'est pourquoi il n'est pas possible de donner accès à ce fichier de données pour tester l'exécution du script.
 
-A la place, un fichier BDNI factice a été créé. Il ne contient que 200 entrées pour vous éviter un temps d'exécution trop long. Les colonnes sensibles ont été neutralisées. Ce fichier est le fichier `BDN.EXPLOITATION` contenu dans le dossier `entrees-bdni`.
+A la place, un fichier BDNI factice a été créé. Il ne contient que 200 entrées pour vous éviter un temps d'exécution trop long. Les colonnes sensibles ont été neutralisées. Ce fichier est le fichier `BDN.EXPLOITATION`.
 
 ### Exécution du script <a name="execscript"></a>
 
@@ -42,7 +44,9 @@ L'exécution de ce script doit recevoir deux arguments positionnels (à fournir 
 
 La commande minimale pour lancer le script est donc :
 
-`python3 fix_bdni.py 'BDNI_ENTREE' 'BDNI_SORTIE'`
+`python3 fix_bdni.py BDN.EXPLOITATION BDN.CORRIGE`
+
+> Vous n'êtes pas obligé de nommer le fichier de sortie BDN.CORRIGE et pouvez renommer le fichier BDN.EXPLOITATION avant son utilisation.
 
 Additionnellement, trois arguments facultatifs peuvent être passés au script :
 
@@ -52,7 +56,7 @@ Additionnellement, trois arguments facultatifs peuvent être passés au script :
 
 Voilà un exemple de la commande permettant de lancer avec tous ses arguments :
 
-`python3 fix_bdni.py 'BDNI_ENTREE' 'BDNI_SORTIE' --fraction 0.5 --insee 'insee.csv' --laposte 'laposte_hexasmal.csv'`
+`python3 fix_bdni.py BDN.EXPLOITATION BDN.CORRIGE --fraction 0.5 --insee 'insee.csv' --laposte 'laposte_hexasmal.csv'`
 
 ### Sorties du script <a name="sortiescript"></a>
 
@@ -69,6 +73,8 @@ Ce script ajoute des colonnes à la BDNI :
   * 3 si on a retrouvé les informations via le code INSEE
   * X si l'erreur n'a pas pu être corrigée
 
+Il écrit ensuite un fichier au même format que le fichier passé en entrée, mais contenant les colonnes additionnelles.
+
 ### Dépendances du script <a name="depscript"></a>
 
 Pour s'exécuter, le script a besoin que python et sa librairie [pandas](https://pandas.pydata.org/) soit installés sur votre environnement de travail.
@@ -79,7 +85,7 @@ Le script utilise une fonction de barre de progression trouvée [ici](https://st
 
 ---
 
-## Modélisation de la propagation d'un agent pathogène sur réseau de contact <a name="model"></a>
+## Modélisation de la propagation d'un agent pathogène <a name="model"></a>
 
 Le script de modélisation de la propagation d'un agent pathogène sur réseau de contact est `model.py`.
 
@@ -109,3 +115,5 @@ Pour s'exécuter, le script a besoin que python soit installé sur votre environ
 * [pandas](https://pandas.pydata.org/)
 * [rich](https://rich.readthedocs.io/en/stable/introduction.html)
 * [tqdm](https://github.com/tqdm/tqdm)
+
+## Liens utiles <a name="liens"></a>
