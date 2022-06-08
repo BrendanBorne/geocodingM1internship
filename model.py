@@ -39,6 +39,7 @@ def initialize_MetaPopulation(row):
 # beta : taux d'infection                                               #
 # Tmax = durée de la simulation                                         #
 # df = pas de temps                                                     #
+# nb_Reps = nombre de répétitions                                       #
 # --------------------------------------------------------------------- #
 
 beta = 0.02
@@ -46,6 +47,12 @@ gamma = 1/20
 omega = 1/100         
 Tmax = 365
 dt = 1
+nb_Reps=10
+
+# Importatation des données réseau
+df_Links = pd.read_csv('networks/5km/reseau_geocode_5km.csv')
+# Chemin pour les sorties
+path = '' # Cette variable permet de choisir si l'on veut exporter les dynamiques dans un dossier précis
 
 # --------------------------- CLASSE NODE ----------------------------- #
 #                                                                       # 
@@ -132,11 +139,8 @@ print('═' * terminal_Size)
 print('[bold purple]INITIALISATION')
 print('─' * terminal_Size)
 
-#                              --------------------------------- PATHS --------------------
-# On commence par importer les données de réseau 
-df_Links = pd.read_csv('networks/5km/reseau_geocode_5km.csv')
-# Chemin pour les sorties
-path = 'sorties/scenario1_5km/geocode/'
+# --------------------- CHEMINS RESEAU ET SORTIE --------------------- #
+
 
 # On créé ensuite un DataFrame contenant les ID de nos nodes
 df_nodes = pd.DataFrame(df_Links['originID'])
@@ -197,7 +201,6 @@ print('─' * terminal_Size)
 print('[bold purple]CALCULS')
 print('─' * terminal_Size)
 
-nb_Reps=300
 sortie_Dynamique_S = []
 sortie_Dynamique_I = []
 sortie_Dynamique_R = []

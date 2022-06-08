@@ -34,7 +34,7 @@ parser.add_argument(
     help="nom du fichier INSEE à utiliser. défaut: 'insee.csv'",
     required=False,
     type=str,
-    default='insee.csv'
+    default='entrees-bdni/insee.csv'
 )
 # Table laposte
 parser.add_argument(
@@ -42,7 +42,7 @@ parser.add_argument(
     help="nom du fichier La Poste à utiliser. défaut: 'laposte_hexasmal.csv'",
     required=False,
     type=str,
-    default='laposte_hexasmal.csv'
+    default='entrees-bdni/laposte_hexasmal.csv'
 )
 # 
 args = parser.parse_args()
