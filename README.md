@@ -107,7 +107,14 @@ Afin de s'exécuter, le script a besoin que le dossier `networks` soit dans le m
 
 ### Sorties du modèle <a name="sortiemodel"></a>
 
-Ce script produit trois fichiers .csv reprenant la dynamique épidémiologique pour chaque état (S,I,R) par pas de temps.
+Ce script produit quatre fichiers :
+
+* dynamique_S.csv : Nombre de noeuds à l'état S pour chaque pas de temps.
+* dynamique_I.csv : Nombre de noeuds à l'état I pour chaque pas de temps.
+* dynamique_R.csv : Nombre de noeuds à l'état R pour chaque pas de temps.
+* epidemy_Size.csv : Nombre cumulé du nombre de noeuds infectés à chaque pas de temps (les noeuds ne sont comptés qu'une fois).
+
+Ces fichiers sont écrits par défaut dans le répertoire `sorties-modele`.
 
 ### Dépendances du modèle <a name="depmodel"></a>
 
@@ -119,3 +126,12 @@ Pour s'exécuter, le script a besoin que python soit installé sur votre environ
 * [tqdm](https://github.com/tqdm/tqdm)
 
 ## Liens utiles <a name="liens"></a>
+
+Les fichiers fournis dans le git permettent de lancer le script sans problème. Ces fichiers étant mis à jour régulièrement, il est possible que ceux que vous trouverez ici ne soient plus complètement à jour.
+
+Vous pouvez récupérer les derniers fichiers à jour ici :
+
+* [La Poste](https://datanova.laposte.fr/explore/dataset/laposte_hexasmal/information/?disjunctive.code_commune_insee&disjunctive.nom_de_la_commune&disjunctive.code_postal&disjunctive.ligne_5)
+* [Insee](https://www.insee.fr/fr/information/6051727)
+
+> L'Insee propose de télécharger un ensemble de fichiers d'un seul coup. Celui qui nous intéresse pour corriger la BDNI est mvtcommune_202X.csv
