@@ -2,8 +2,6 @@
 
 Ce dépôt git a pour objectif de mettre à disposition les scripts de correction de la Base Nationale d'Identification animale et de modélisation de la propagation d'un agent pathogène sur réseau de contact qui ont été produits au cours de mon stage de M1 MODE au sein de l'équipe DYNAMO de l'INRAE.
 
-> Dépôt en cours de construction !
-
 ---
 
 ## Sommaire
@@ -124,6 +122,8 @@ Pour s'exécuter, le script a besoin que python soit installé sur votre environ
 * [pandas](https://pandas.pydata.org/)
 * [rich](https://rich.readthedocs.io/en/stable/introduction.html)
 * [tqdm](https://github.com/tqdm/tqdm)
+
+---
 
 ## Liens utiles <a name="liens"></a>
 
