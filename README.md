@@ -9,7 +9,15 @@ Ce dépôt git a pour objectif de mettre à disposition les scripts de correctio
 ## Sommaire
 
 1. [Correction de la BDNI](#bdni)
-   1. [Exécution du script](#execscript)
+   * [Exécution](#execscript)
+   * [Sorties](#sortiescript)
+   * [Dépendances](#depscript)
+   * [Crédits](#crédits)
+
+2. [Modélisation de la propagation d'un agent pathogène](#model)
+   * [Exécution](#execmodel)
+   * [Sorties](#sortiemodel)
+   * [Dépendances](#depmodel)
 
 ---
 
@@ -46,7 +54,7 @@ Voilà un exemple de la commande permettant de lancer avec tous ses arguments :
 
 `python3 fix_bdni.py 'BDNI_ENTREE' 'BDNI_SORTIE' --fraction 0.5 --insee 'insee.csv' --laposte 'laposte_hexasmal.csv'`
 
-### Sorties du script
+### Sorties du script <a name="sortiescript"></a>
 
 Ce script ajoute des colonnes à la BDNI :
 
@@ -61,21 +69,21 @@ Ce script ajoute des colonnes à la BDNI :
   * 3 si on a retrouvé les informations via le code INSEE
   * X si l'erreur n'a pas pu être corrigée
 
-### Dépendances du script
+### Dépendances du script <a name="depscript"></a>
 
 Pour s'exécuter, le script a besoin que python et sa librairie [pandas](https://pandas.pydata.org/) soit installés sur votre environnement de travail.
 
-### Crédits
+### Crédits <a name="credits"></a>
 
 Le script utilise une fonction de barre de progression trouvée [ici](https://stackoverflow.com/questions/3173320/text-progress-bar-in-terminal-with-block-characters).
 
 ---
 
-## Modélisation de la propagation d'un agent pathogène sur réseau de contact
+## Modélisation de la propagation d'un agent pathogène sur réseau de contact <a name="model"></a>
 
 Le script de modélisation de la propagation d'un agent pathogène sur réseau de contact est `model.py`.
 
-### Exécution du modèle
+### Exécution du modèle <a name="execmodel"></a>
 
 Ce script est exécuté a partir d'un terminal avec la commande `python3`.
 
@@ -89,11 +97,11 @@ En l'état, il faut aller changer à la main les paramètres du scénario que l'
 
 Afin de s'exécuter, le script a besoin que le dossier `networks` soit dans le même répertoire.
 
-### Sorties du modèle
+### Sorties du modèle <a name="sortiemodel"></a>
 
 Ce script produit trois fichiers .csv reprenant la dynamique épidémiologique pour chaque état (S,I,R) par pas de temps.
 
-### Dépendances du modèle
+### Dépendances du modèle <a name="depmodel"></a>
 
 Pour s'exécuter, le script a besoin que python soit installé sur votre environnement de travail. Il a également besoin des librairies suivantes :
 
