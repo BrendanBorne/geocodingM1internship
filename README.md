@@ -66,6 +66,8 @@ Ce script peut également être exécuté a partir d'un terminal avec la command
 
 Ce script ne prend pas d'arguments en entrée à l'heure actuelle, mais un travail est en cours afin de permettre de lui passer en arguments un nombre de répétitions à effectuer, sur quel réseau et pour quel scénario.
 
+En l'état, il faut donc aller changer à la main les paramètres du scénario que l'on souhaite tester ainsi que le fichier de réseau à importer.
+
 Afin de s'exécuter, le script a besoin que le dossier `networks` soit dans le même répertoire.
 
 ### Sorties
@@ -80,4 +82,3 @@ Pour s'exécuter, le script a besoin que python soit installé sur votre environ
 * [pandas](https://pandas.pydata.org/)
 * [rich](https://rich.readthedocs.io/en/stable/introduction.html)
 * [tqdm](https://github.com/tqdm/tqdm)
-
