@@ -1,37 +1,37 @@
-# Améliorer la géolocalisation des exploitations pour prédire la circulation d’agents pathogènes dans les troupeaux bovins en Loire-Atlantique
+# Improving farm geolocation to predict pathogen circulation in cattle herds in Loire-Atlantique, France
 
-Ce dépôt git a pour objectif de mettre à disposition les scripts de correction de la Base Nationale d'Identification animale et de modélisation de la propagation d'un agent pathogène sur réseau de contact qui ont été produits au cours de mon stage de M1 MODE au sein de l'équipe DYNAMO de l'INRAE.
+The purpose of this git repository is to provide the scripts for correcting the National Animal Identification Database and for modeling the spread of a pathogen over a contact network, which were produced during my M1 MODE internship with INRAE's DYNAMO team.
 
-Vous pouvez télécharger l'intégralité du contenu de ce dépôt pour le tester sur votre machine via le bouton `Code` puis `Download ZIP` ou en clonant le dépôt chez vous.
-
----
-
-## Sommaire
-
-1. [Correction de la BDNI](#bdni)
-   * [Exécution](#execscript)
-   * [Sorties](#sortiescript)
-   * [Dépendances](#depscript)
-   * [Crédits](#credits)
-
-2. [Modélisation de la propagation d'un agent pathogène](#model)
-   * [Exécution](#execmodel)
-   * [Sorties](#sortiemodel)
-   * [Dépendances](#depmodel)
-
-3. [Liens utiles](#liens)
+You can download the entire contents of this repository for testing on your machine via the `Code` button then `Download ZIP` or by cloning the repository at home.
 
 ---
 
-## Correction de la BDNI <a name="bdni"></a>
+## Contents
 
-Le script de correction de la BDNI est `fix_bdni.py`.
+1. [BDNI correction](#bdni)
+   * Execution](#execscript)
+   * [Outputs](#sortiescript)
+   * [Dependencies](#depscript)
+   * [Credits](#credits)
 
-Tous les fichiers nécessaires au script sont contenus dans le dossier `entrees-bdni`.
+2. [Pathogen spread model](#model)
+   * [Execution](#execmodel)
+   * Outputs](#sortiemodel)
+   * [Dependencies](#depmodel)
 
-Le script n'est pas exécutable sans fichier BDNI à corriger. Les données contenues dans la BDNI sont des données considérées comme sensibles. C'est pourquoi il n'est pas possible de donner accès à ce fichier de données pour tester l'exécution du script.
+3. [Useful links](#liens)
 
-A la place, un fichier BDNI factice a été créé. Il ne contient que 200 entrées pour vous éviter un temps d'exécution trop long. Les colonnes sensibles ont été neutralisées. Ce fichier est `BDN.EXPLOITATION`.
+---
+
+## BDNI correction <a name="bdni"></a>
+
+The BDNI correction script is `fix_bdni.py`.
+
+All files required for the script are contained in the `entrees-bdni` folder.
+
+The script cannot be run without a BDNI file to correct. The data contained in the BDNI is considered sensitive. For this reason, it is not possible to give access to this data file to test the script execution.
+
+Instead, a dummy BDNI file has been created. It contains only 200 entries, to save you a long execution time. Sensitive columns have been neutralized. This file is `BDN.EXPLOITATION`.
 
 ### Exécution du script <a name="execscript"></a>
 
