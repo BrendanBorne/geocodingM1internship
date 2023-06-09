@@ -9,14 +9,14 @@ You can download the entire contents of this repository for testing on your mach
 ## Contents
 
 1. [BDNI correction](#bdni)
-   * Execution](#execscript)
+   * [Execution](#execscript)
    * [Outputs](#sortiescript)
    * [Dependencies](#depscript)
    * [Credits](#credits)
 
 2. [Pathogen spread model](#model)
    * [Execution](#execmodel)
-   * Outputs](#sortiemodel)
+   * [Outputs](#sortiemodel)
    * [Dependencies](#depmodel)
 
 3. [Useful links](#liens)
